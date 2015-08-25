@@ -100,6 +100,11 @@ module.exports = {
         });
       }
     }, {
+        type: 'checkbox',
+        label: 'Start minimized',
+        setting: 'startMinimized'
+    }, {
+
       label: 'Launch Dev Tools',
       click: function() {
         win.showDevTools();

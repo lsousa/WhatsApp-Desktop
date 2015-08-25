@@ -8,6 +8,7 @@ var DEFAULT_SETTINGS = {
   openLinksInBrowser: true,
   asMenuBarAppOSX: false,
   windowState: {},
+  startMinimized: false,
 };
 
 var db = new Store(path.join(gui.App.dataPath, 'preferences.json'));

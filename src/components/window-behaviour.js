@@ -149,5 +149,16 @@ module.exports = {
     }
 
     win.show();
-  }
+  },
+
+  /**
+   * Start minimized
+   */
+   startMinimized: function(win) {
+    if (win.tray) {
+      win.close();
+    } else {
+      win.minimize();
+    }
+   }
 };

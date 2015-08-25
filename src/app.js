@@ -40,8 +40,12 @@ if (settings.asMenuBarAppOSX) {
 
 // Load the app menus
 menus.loadMenuBar(win)
-if (platform.isWindows) {
+if (platform.isWindows || platform.isLinux) {
   menus.loadTrayIcon(win);
+
+  if (settings.startMinimized) {
+    windowBehaviour.startMinimized(win);
+  }
 }
 
 // Adjust the default behaviour of the main window
