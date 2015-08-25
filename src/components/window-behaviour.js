@@ -14,17 +14,15 @@ module.exports = {
     });
 
     // Don't quit the app when the window is closed
-    if (!platform.isLinux) {
-      win.removeAllListeners('close');
-      win.on('close', function(quit) {
-        if (quit) {
-          this.saveWindowState(win);
-          win.close(true);
-        } else {
-          win.hide();
-        }
-      }.bind(this));
-    }
+    win.removeAllListeners('close');
+    win.on('close', function(quit) {
+      if (quit) {
+        this.saveWindowState(win);
+        win.close(true);
+      } else {
+        win.hide();
+      }
+    }.bind(this));
   },
 
   /**
